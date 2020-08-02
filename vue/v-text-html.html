@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>v-test</div>
+        <div v-text="message"></div>
+        <div v-text="array"></div>
+        <div v-text="obj"></div>
+        <div v-text="message+'!!!'"></div>
+        <div>{{message + '!!!'}}</div>
+        <br>
+        <div>v-html</div>
+        <div v-html="content"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: '复杂数据类型!',
+                array:[
+                    1,2,3,5
+                ],
+                obj:{
+                    id:"1",
+                    name:"name"
+                },
+                content:"<a href='https://gitee.com/natsuki_kining/javascript-demo/commits/master'>vue-demo</a>"
+            }
+        })
+    </script>
+</body>
+</html>
