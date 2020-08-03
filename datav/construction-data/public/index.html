@@ -27,10 +27,54 @@
 </head>
 <body>
   <div id="app">
-    <dv-border-box-1>Welcome to DataV</dv-border-box-1>
+        <div id="data-view">
+          <dv-full-screen-container>
+      
+            <top-header />
+      
+            <div class="main-content">
+              <digital-flop />
+      
+              <div class="block-left-right-content">
+                <ranking-board />
+      
+                <div class="block-top-bottom-content">
+                  <div class="block-top-content">
+                    <rose-chart />
+      
+                    <water-level-chart />
+      
+                    <scroll-board />
+                  </div>
+      
+                  <cards />
+                </div>
+              </div>
+            </div>
+          </dv-full-screen-container>
+        </div>
   </div>
   <script type="vue" m src="../src/App.vue"></script>
   <script>
+    Vue.component('top-header',{
+      template:'<h3>top-header</h3>'
+    });
+    Vue.component('ranking-board',{
+      template:'<h3>ranking-board</h3>'
+    });
+    Vue.component('rose-chart',{
+      template:'<h3>rose-chart</h3>'
+    });
+    Vue.component('digital-flop',{
+      template:'<h3>digital-flop</h3>'
+    });
+    Vue.component('water-level-chart',{
+      template:'<h3>water-level-chart</h3>'
+    });
+    Vue.component('scroll-board',{
+      template:'<h3>scroll-board</h3>'
+    });
+
     var app = new Vue({
       el: '#app'
     })
