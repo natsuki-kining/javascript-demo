@@ -27,6 +27,12 @@
         <div v-for="(value, name, index) in object">
             {{ index }}. {{ name }}: {{ value }}
         </div>
+        <hr>
+        <ul>
+            <template v-for="item in items">
+              <li>{{ item.message }}</li>
+            </template>
+        </ul>
     </div>
 
     
