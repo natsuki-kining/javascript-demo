@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <ul id="example-1">
+            <li v-for="item in items" :key="item.message">
+              {{ item.message }}
+            </li>
+        </ul>
+        <hr>
+        <ul id="v-for-object" class="demo">
+            <li v-for="value in object">
+              {{ value }}
+            </li>
+        </ul>
+        <hr>
+        <div v-for="(value, name) in object">
+            {{ name }}: {{ value }}
+        </div>
+        <hr>
+        <div v-for="(value, name, index) in object">
+            {{ index }}. {{ name }}: {{ value }}
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                object: {
+                    title: 'How to do lists in Vue',
+                    author: 'Jane Doe',
+                    publishedAt: '2016-04-10'
+                },
+                items: [
+                    { message: 'Foo' },
+                    { message: 'Bar' }
+                ]
+            }
+        })
+        
+    </script>
+</body>
+</html>
