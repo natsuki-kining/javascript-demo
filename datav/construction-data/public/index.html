@@ -23,6 +23,301 @@
       justify-content: center;
       align-items: center;
     }
+
+    #app {
+      font-family: 'Avenir', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #2c3e50;
+      width: 100%;
+      height: 100%;
+    }
+
+    #data-view {
+      width: 100%;
+      height: 100%;
+      background-color: #030409;
+      color: #fff;
+    }
+
+  #dv-full-screen-container {
+    background-image: url('../src/components/datav/img/bg.png');
+    background-size: 100% 100%;
+    box-shadow: 0 0 3px blue;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .block-left-right-content {
+    flex: 1;
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .block-top-bottom-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+
+  .block-top-content {
+    height: 55%;
+    display: flex;
+    flex-grow: 0;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+  }
+  #top-header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  }
+  .header-center-decoration {
+    width: 40%;
+    height: 60px;
+    margin-top: 30px;
+  }
+
+  .header-left-decoration, .header-right-decoration {
+    width: 25%;
+    height: 60px;
+  }
+
+  .center-title {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+  }
+
+  #digital-flop {
+    position: relative;
+    height: 15%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(6, 30, 93, 0.5);
+  }
+
+  .dv-decoration-10 {
+    position: absolute;
+    width: 95%;
+    left: 2.5%;
+    height: 5px;
+    bottom: 0px;
+  }
+
+  .digital-flop-item {
+    width: 11%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid rgb(6, 30, 93);
+    border-right: 3px solid rgb(6, 30, 93);
+  }
+
+  .digital-flop-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .digital-flop {
+    display: flex;
+  }
+
+  .unit {
+    margin-left: 10px;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding-bottom: 13px;
+  }
+
+  #ranking-board {
+    width: 20%;
+    box-shadow: 0 0 3px blue;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(6, 30, 93, 0.5);
+    border-top: 2px solid rgba(1, 153, 209, .5);
+    box-sizing: border-box;
+    padding: 0px 30px;
+  }
+
+  .ranking-board-title {
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .dv-scroll-ranking-board {
+    flex: 1;
+  }
+
+  #rose-chart {
+    width: 30%;
+    height: 100%;
+    background-color: rgba(6, 30, 93, 0.5);
+    border-top: 2px solid rgba(1, 153, 209, .5);
+    box-sizing: border-box;
+  }
+
+  .rose-chart-title {
+    height: 50px;
+    font-weight: bold;
+    text-indent: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .dv-charts-container {
+    height: calc(~"100% - 50px");
+  }
+
+  #water-level-chart {
+    width: 20%;
+    box-sizing: border-box;
+    margin-left: 20px;
+    background-color: rgba(6, 30, 93, 0.5);
+    border-top: 2px solid rgba(1, 153, 209, .5);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .water-level-chart-title {
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    justify-content: center;
+  }
+
+  .water-level-chart-details {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    align-items: flex-end;
+  }
+  .water-level-chart-details span {
+      font-size: 35px;
+      font-weight: bold;
+      color: #58a1ff;
+      margin: 0 5px;
+      margin-bottom: -5px;
+  }
+  
+
+  .chart-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dv-water-pond-level {
+    max-width: 90%;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #19c3eb;
+    border-radius: 50%;
+
+    ellipse {
+      stroke: transparent !important;
+    }
+
+    text {
+      font-size: 40px;
+    }
+  
+    #cards {
+    display: flex;
+    justify-content: space-between;
+    height: 45%;
+    }
+  .card-item {
+    background-color: rgba(6, 30, 93, 0.5);
+    border-top: 2px solid rgba(1, 153, 209, .5);
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-header {
+    display: flex;
+    height: 20%;
+    align-items: center;
+    justify-content: space-between;
+  }
+    .card-header-left {
+      font-size: 18px;
+      font-weight: bold;
+      padding-left: 20px;
+    }
+
+    .card-header-right {
+      padding-right: 20px;
+      font-size: 40px;
+      color: #03d3ec;
+    }
+  
+
+  .ring-charts {
+    height: 55%;
+  }
+
+  .card-footer {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .card-footer-item {
+    padding: 5px 10px 0px 10px;
+    box-sizing: border-box;
+    width: 40%;
+    background-color: rgba(6, 30, 93, 0.7);
+    border-radius: 3px;
+  }
+    .footer-title {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .footer-detail {
+      font-size: 20px;
+      color: #1294fb;
+      display: flex;
+      font-size: 18px;
+      align-items: center;
+    }
+      .dv-digital-flop {
+        margin-right: 5px;
+      }
+    
+  
+
   </style>
 </head>
 <body>
@@ -30,54 +325,399 @@
         <div id="data-view">
           <dv-full-screen-container>
       
-            <top-header />
+            <div id="top-header">
+              <dv-decoration-8 class="header-left-decoration" />
+              <dv-decoration-5 class="header-center-decoration" />
+              <dv-decoration-8 class="header-right-decoration" :reverse="true" />
+              <div class="center-title">施工养护综合数据</div>
+            </div>
       
             <div class="main-content">
-              <digital-flop />
+              <div id="digital-flop">
+                <div
+                  class="digital-flop-item"
+                  v-for="item in digitalFlopData"
+                  :key="item.title"
+                >
+                  <div class="digital-flop-title">{{ item.title }}</div>
+                  <div class="digital-flop">
+                    <dv-digital-flop
+                      :config="item.number"
+                      style="width:100px;height:50px;"
+                    />
+                      <div class="unit">{{ item.unit }}</div>
+                  </div>
+                </div>
+            
+                <dv-decoration-10 />
+              </div>
       
               <div class="block-left-right-content">
-                <ranking-board />
+                  <div id="ranking-board">
+                    <div class="ranking-board-title">巡查上报记录数量</div>
+                    <dv-scroll-ranking-board :config="config" />
+                  </div>
       
                 <div class="block-top-bottom-content">
                   <div class="block-top-content">
-                    <rose-chart />
+                    <div id="rose-chart">
+                      <div class="rose-chart-title">累计计量资金分布</div>
+                      <dv-charts :option="option" />
+                    </div>
       
-                    <water-level-chart />
+                    <div id="water-level-chart">
+                      <div class="water-level-chart-title">计划资金累计完成情况</div>
+                  
+                      <div class="water-level-chart-details">
+                        累计完成<span>235,680</span>元
+                      </div>
+                  
+                      <div class="chart-container">
+                        <dv-water-level-pond :config="waterConfig" />
+                      </div>
+                    </div>
       
-                    <scroll-board />
+                    <div id="scroll-board">
+                      <dv-scroll-board :config="scrollConfig" />
+                    </div>
                   </div>
       
-                  <cards />
+                  <div id="cards">
+                    <div
+                      class="card-item"
+                      v-for="(card, i) in cards"
+                      :key="card.title"
+                    >
+                      <div class="card-header">
+                        <div class="card-header-left">{{ card.title }}</div>
+                        <div class="card-header-right">{{ '0' + (i + 1) }}</div>
+                      </div>
+                      <dv-charts class="ring-charts" :option="card.ring" />
+                      <div class="card-footer">
+                        <div class="card-footer-item">
+                          <div class="footer-title">累计金额</div>
+                          <div class="footer-detail">
+                            <dv-digital-flop :config="card.total" style="width:70%;height:35px;" />元
+                          </div>
+                        </div>
+                        <div class="card-footer-item">
+                          <div class="footer-title">巡查病害</div>
+                          <div class="footer-detail">
+                            <dv-digital-flop :config="card.num" style="width:70%;height:35px;" />处
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </dv-full-screen-container>
         </div>
   </div>
-  <script type="vue" m src="../src/App.vue"></script>
+
   <script>
-    Vue.component('top-header',{
-      template:'<h3>top-header</h3>'
-    });
-    Vue.component('ranking-board',{
-      template:'<h3>ranking-board</h3>'
-    });
-    Vue.component('rose-chart',{
-      template:'<h3>rose-chart</h3>'
-    });
-    Vue.component('digital-flop',{
-      template:'<h3>digital-flop</h3>'
-    });
-    Vue.component('water-level-chart',{
-      template:'<h3>water-level-chart</h3>'
-    });
-    Vue.component('scroll-board',{
-      template:'<h3>scroll-board</h3>'
-    });
+
+    function randomExtend (minNum, maxNum) {
+      if (arguments.length === 1) {
+        return parseInt(Math.random() * minNum + 1, 10)
+      } else {
+        return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10)
+      }
+    }
+
 
     var app = new Vue({
-      el: '#app'
+      el: '#app',
+      data:{
+        digitalFlopData:[
+        {
+          title: '管养里程',
+          number: {
+            number: [randomExtend(20000, 30000)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#4d99fc',
+              fontWeight: 'bold'
+            }
+          },
+          unit: '公里'
+        },
+        {
+          title: '桥梁',
+          number: {
+            number: [randomExtend(20, 30)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#f46827',
+              fontWeight: 'bold'
+            }
+          },
+          unit: '座'
+        },
+        {
+          title: '涵洞隧道',
+          number: {
+            number: [randomExtend(20, 30)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#40faee',
+              fontWeight: 'bold'
+            }
+          },
+          unit: '个'
+        },
+        {
+          title: '匝道',
+          number: {
+            number: [randomExtend(10, 20)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#4d99fc',
+              fontWeight: 'bold'
+            }
+          },
+          unit: '个'
+        },
+        {
+          title: '隧道',
+          number: {
+            number: [randomExtend(5, 10)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#f46827',
+              fontWeight: 'bold'
+            }
+          },
+          unit: '个'
+        },
+        {
+          title: '服务区',
+          number: {
+            number: [randomExtend(5, 10)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#40faee',
+              fontWeight: 'bold'
+            }
+          },
+          unit: '个'
+        },
+        {
+          title: '收费站',
+          number: {
+            number: [randomExtend(5, 10)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#4d99fc',
+              fontWeight: 'bold'
+            }
+          },
+          unit: '个'
+        },
+        {
+          title: '超限站',
+          number: {
+            number: [randomExtend(5, 10)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#f46827',
+              fontWeight: 'bold'
+            }
+          },
+          unit: '个'
+        },
+        {
+          title: '停车区',
+          number: {
+            number: [randomExtend(5, 10)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#40faee',
+              fontWeight: 'bold'
+            }
+          },
+          unit: '个'
+        }
+      ],
+        option : {
+          series: [
+            {
+              type: 'pie',
+              radius: '50%',
+              roseSort: false,
+              data: [
+                { name: '路基', value: randomExtend(40, 70) },
+                { name: '交安设施', value: randomExtend(20, 30) },
+                { name: '日常养护', value: randomExtend(10, 50) },
+                { name: '桥通', value: randomExtend(5, 20) },
+                { name: '交通事故', value: randomExtend(40, 50) },
+                { name: '路面', value: randomExtend(20, 30) },
+                { name: '绿化', value: randomExtend(5, 10) },
+                { name: '计日工', value: randomExtend(20, 35) },
+                { name: '除雪', value: randomExtend(5, 10) }
+              ],
+              insideLabel: {
+                show: false
+              },
+              outsideLabel: {
+                formatter: '{name} {percent}%',
+                labelLineEndLength: 20,
+                style: {
+                  fill: '#fff'
+                },
+                labelLineStyle: {
+                  stroke: '#fff'
+                }
+              },
+              roseType: true
+            }
+          ],
+          color: ['#da2f00', '#fa3600', '#ff4411', '#ff724c', '#541200', '#801b00', '#a02200', '#5d1400', '#b72700']
+        },
+        config: {
+          data: [
+            {
+              name: '日常养护',
+              value: 55
+            },
+            {
+              name: '交通事故',
+              value: 120
+            },
+            {
+              name: '路面',
+              value: 78
+            },
+            {
+              name: '桥通',
+              value: 66
+            },
+            {
+              name: '计日工',
+              value: 80
+            },
+            {
+              name: '路基',
+              value: 45
+            },
+            {
+              name: '交安设施',
+              value: 29
+            },
+            {
+              name: '除雪',
+              value: 29
+            },
+            {
+              name: '绿化',
+              value: 29
+            }
+          ],
+          rowNum: 9
+        },
+        waterConfig: {
+          data: [45],
+          shape: 'round',
+          waveHeight: 25,
+          waveNum: 2
+        },
+        scrollConfig: {
+          header: ['时间', '病害信息', '数量', '标段'],
+          data: [
+            ['2019-07-01 19:25:00', '路面危害-松散', '5', 'xxxxxxx'],
+            ['2019-07-02 17:25:00', '路面危害-路面油污清理', '13', 'xxxxxxx'],
+            ['2019-07-03 16:25:00', '交安设施-交通标志牌结构', '6', 'xxxxxxx'],
+            ['2019-07-04 15:25:00', '路基危害-防尘网', '2', 'xxxxxxx'],
+            ['2019-07-05 14:25:00', '交安设施-交通标志牌结构', '1', 'xxxxxxx'],
+            ['2019-07-06 13:25:00', '路面危害-松散', '3', 'xxxxxxx'],
+            ['2019-07-07 12:25:00', '路基危害-防尘网', '4', 'xxxxxxx'],
+            ['2019-07-08 11:25:00', '路面危害-路面油污清理', '2', 'xxxxxxx'],
+            ['2019-07-09 10:25:00', '交安设施-交通标志牌结构', '5', 'xxxxxxx'],
+            ['2019-07-10 09:25:00', '路基危害-防尘网', '3', 'xxxxxxx']
+          ],
+          index: true,
+          columnWidth: [50, 170, 300],
+          align: ['center'],
+          rowNum: 7,
+          headerBGC: '#1981f6',
+          headerHeight: 45,
+          oddRowBGC: 'rgba(0, 44, 81, 0.8)',
+          evenRowBGC: 'rgba(10, 29, 50, 0.8)'
+        },
+        cards : function(){return new Array(5).fill(0).map((foo, i) => ({
+          title: '测试路段' + (i + i),
+          total: {
+            number: [randomExtend(9000, 10000)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#ea6027',
+              fontWeight: 'bold'
+            }
+          },
+          num: {
+            number: [randomExtend(30, 60)],
+            content: '{nt}',
+            textAlign: 'right',
+            style: {
+              fill: '#26fcd8',
+              fontWeight: 'bold'
+            }
+          },
+          ring: {
+            series: [
+              {
+                type: 'gauge',
+                startAngle: -Math.PI / 2,
+                endAngle: Math.PI * 1.5,
+                arcLineWidth: 13,
+                radius: '80%',
+                data: [
+                  { name: '资金占比', value: randomExtend(40, 60) }
+                ],
+                axisLabel: {
+                  show: false
+                },
+                axisTick: {
+                  show: false
+                },
+                pointer: {
+                  show: false
+                },
+                backgroundArc: {
+                  style: {
+                    stroke: '#224590'
+                  }
+                },
+                details: {
+                  show: true,
+                  formatter: '资金占比{value}%',
+                  style: {
+                    fill: '#1ed3e5',
+                    fontSize: 20
+                  }
+                }
+              }
+            ],
+            color: ['#03d3ec']
+          }
+        }))
+      }()
+      }
     })
+
+
+    
   </script>
 </body>
 </html>
