@@ -146,7 +146,7 @@ var digitalFlop = Vue.extend({
     
         createData()
     
-        setInterval(createData, 30000)
+        setInterval(createData, 3000)
       }
 });
 
