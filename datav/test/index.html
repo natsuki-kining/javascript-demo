@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+    <div id="app">
+        <div id="data-view">
+            <dv-full-screen-container >
+
+                <top-header></top-header>
+
+                
+
+            </dv-full-screen-container>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../dist/datav.map.vue.js"></script>
+    <script>
+        Vue.component("top-header",{
+            template:'<div id="top-header"> <dv-decoration-8 class="header-left-decoration" /> <dv-decoration-5 class="header-center-decoration" /> <dv-decoration-8 class="header-right-decoration" :reverse="true" /> <div class="center-title">施工养护综合数据</div> </div>'
+        })
+        var app = new Vue({
+            el: '#app'
+        })
+    </script>
+</body>
+</html>
