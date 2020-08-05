@@ -1,4 +1,6 @@
-html, body, #app {
+html,
+body,
+#app {
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -6,7 +8,7 @@ html, body, #app {
 }
 
 .border-box-content {
-    color: rgb(66,185,131);
+    color: rgb(66, 185, 131);
     font-size: 40px;
     font-weight: bold;
     display: flex;
@@ -42,32 +44,33 @@ html, body, #app {
     flex: 1;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .block-left-right-content {
+.block-left-right-content {
     flex: 1;
     display: flex;
     margin-top: 20px;
-  }
+}
 
-  .block-top-bottom-content {
+.block-top-bottom-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding-left: 20px;
-  }
+}
 
-  .block-top-content {
+.block-top-content {
     height: 55%;
     display: flex;
     flex-grow: 0;
     box-sizing: border-box;
     padding-bottom: 20px;
-  }
+}
 
 
 /* top-head */
+
 #top-header {
     position: relative;
     width: 100%;
@@ -83,7 +86,8 @@ html, body, #app {
     margin-top: 30px;
 }
 
-.header-left-decoration, .header-right-decoration {
+.header-left-decoration,
+.header-right-decoration {
     width: 25%;
     height: 60px;
 }
@@ -98,27 +102,27 @@ html, body, #app {
 }
 
 
-
 /* digital-flop */
+
 #digital-flop {
-  position: relative;
-  height: 15%;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(6, 30, 93, 0.5);
+    position: relative;
+    height: 15%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(6, 30, 93, 0.5);
 }
 
-  .dv-decoration-10 {
+.dv-decoration-10 {
     position: absolute;
     width: 95%;
     left: 2.5%;
     height: 5px;
     bottom: 0px;
-  }
+}
 
-  .digital-flop-item {
+.digital-flop-item {
     width: 11%;
     height: 80%;
     display: flex;
@@ -127,27 +131,29 @@ html, body, #app {
     align-items: center;
     border-left: 3px solid rgb(6, 30, 93);
     border-right: 3px solid rgb(6, 30, 93);
-  }
+}
 
-  .digital-flop-title {
+.digital-flop-title {
     font-size: 20px;
     margin-bottom: 20px;
-  }
+}
 
-  .digital-flop {
+.digital-flop {
     display: flex;
-  }
+}
 
-  .unit {
+.unit {
     margin-left: 10px;
     display: flex;
     align-items: flex-end;
     box-sizing: border-box;
     padding-bottom: 13px;
-  }
+}
+
 
 /* ranking-board */
-  #ranking-board {
+
+#ranking-board {
     width: 20%;
     box-shadow: 0 0 3px blue;
     display: flex;
@@ -156,37 +162,101 @@ html, body, #app {
     border-top: 2px solid rgba(1, 153, 209, .5);
     box-sizing: border-box;
     padding: 0px 30px;
-  }
+}
+
 .ranking-board-title {
-  font-weight: bold;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
 }
 
 .dv-scroll-ranking-board {
-  flex: 1;
+    flex: 1;
 }
 
 
 /* rose-chart */
+
 #rose-chart {
-  width: 30%;
-  height: 100%;
-  background-color: rgba(6, 30, 93, 0.5);
-  border-top: 2px solid rgba(1, 153, 209, .5);
-  box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(6, 30, 93, 0.5);
+    border-top: 2px solid rgba(1, 153, 209, .5);
+    box-sizing: border-box;
 }
+
 .rose-chart-title {
-  height: 50px;
-  font-weight: bold;
-  text-indent: 20px;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
+    height: 50px;
+    font-weight: bold;
+    text-indent: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .dv-charts-container {
-  height: calc(~"100% - 50px");
+    height: calc(~"100% - 50px");
+}
+
+
+/* water-level-chart */
+
+#water-level-chart {
+    width: 20%;
+    box-sizing: border-box;
+    margin-left: 20px;
+    background-color: rgba(6, 30, 93, 0.5);
+    border-top: 2px solid rgba(1, 153, 209, .5);
+    display: flex;
+    flex-direction: column;
+}
+
+.water-level-chart-title {
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.water-level-chart-details {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    align-items: flex-end;
+}
+
+.water-level-chart-details span {
+    font-size: 35px;
+    font-weight: bold;
+    color: #58a1ff;
+    margin: 0 5px;
+    margin-bottom: -5px;
+}
+
+#water-level-chart .chart-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#water-level-chart .dv-water-pond-level {
+    max-width: 90%;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #19c3eb;
+    border-radius: 50%;
+}
+
+#water-level-chart .dv-water-pond-level ellipse {
+    stroke: transparent !important;
+}
+
+#water-level-chart .dv-water-pond-level text {
+    font-size: 40px;
 }

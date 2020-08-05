@@ -27,8 +27,7 @@ var rankingBoard = Vue.extend({
     data() {
         return {
             rankingBoardConfig: {
-                data: [
-                    {
+                data: [{
                         name: '日常养护',
                         value: 55
                     },
@@ -73,66 +72,78 @@ var rankingBoard = Vue.extend({
 
 var roseChart = Vue.extend({
     template: `<div id="rose-chart"> <div class="rose-chart-title">累计计量资金分布</div> <dv-charts :option="roseChartOption" /> </div>`,
-    data () {
+    data() {
         return {
             roseChartOption: {}
         }
-      },
-      methods: {
-        createData () {
-          const { randomExtend } = this
-    
-          this.roseChartOption = {
-            series: [
-              {
-                type: 'pie',
-                radius: '50%',
-                roseSort: false,
-                data: [
-                  { name: '路基', value: randomExtend(40, 70) },
-                  { name: '交安设施', value: randomExtend(20, 30) },
-                  { name: '日常养护', value: randomExtend(10, 50) },
-                  { name: '桥通', value: randomExtend(5, 20) },
-                  { name: '交通事故', value: randomExtend(40, 50) },
-                  { name: '路面', value: randomExtend(20, 30) },
-                  { name: '绿化', value: randomExtend(5, 10) },
-                  { name: '计日工', value: randomExtend(20, 35) },
-                  { name: '除雪', value: randomExtend(5, 10) }
-                ],
-                insideLabel: {
-                  show: false
-                },
-                outsideLabel: {
-                  formatter: '{name} {percent}%',
-                  labelLineEndLength: 20,
-                  style: {
-                    fill: '#fff'
-                  },
-                  labelLineStyle: {
-                    stroke: '#fff'
-                  }
-                },
-                roseType: true
-              }
-            ],
-            color: ['#da2f00', '#fa3600', '#ff4411', '#ff724c', '#541200', '#801b00', '#a02200', '#5d1400', '#b72700']
-          }
+    },
+    methods: {
+        createData() {
+            const { randomExtend } = this
+
+            this.roseChartOption = {
+                series: [{
+                    type: 'pie',
+                    radius: '50%',
+                    roseSort: false,
+                    data: [
+                        { name: '路基', value: randomExtend(40, 70) },
+                        { name: '交安设施', value: randomExtend(20, 30) },
+                        { name: '日常养护', value: randomExtend(10, 50) },
+                        { name: '桥通', value: randomExtend(5, 20) },
+                        { name: '交通事故', value: randomExtend(40, 50) },
+                        { name: '路面', value: randomExtend(20, 30) },
+                        { name: '绿化', value: randomExtend(5, 10) },
+                        { name: '计日工', value: randomExtend(20, 35) },
+                        { name: '除雪', value: randomExtend(5, 10) }
+                    ],
+                    insideLabel: {
+                        show: false
+                    },
+                    outsideLabel: {
+                        formatter: '{name} {percent}%',
+                        labelLineEndLength: 20,
+                        style: {
+                            fill: '#fff'
+                        },
+                        labelLineStyle: {
+                            stroke: '#fff'
+                        }
+                    },
+                    roseType: true
+                }],
+                color: ['#da2f00', '#fa3600', '#ff4411', '#ff724c', '#541200', '#801b00', '#a02200', '#5d1400', '#b72700']
+            }
         },
-        randomExtend (minNum, maxNum) {
-          if (arguments.length === 1) {
-            return parseInt(Math.random() * minNum + 1, 10)
-          } else {
-            return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10)
-          }
+        randomExtend(minNum, maxNum) {
+            if (arguments.length === 1) {
+                return parseInt(Math.random() * minNum + 1, 10)
+            } else {
+                return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10)
+            }
         }
-      },
-      mounted () {
+    },
+    mounted() {
         const { createData } = this
-    
+
         createData()
-    
+
         setInterval(createData, 30000)
-      }
+    }
+});
+
+var waterLevelChart = Vue.extend({
+    template: `<div id="water-level-chart"> <div class="water-level-chart-title">计划资金累计完成情况</div> <div class="water-level-chart-details"> 累计完成<span>235,680</span>元 </div> <div class="chart-container"> <dv-water-level-pond :config="waterLevelChartConfig" /> </div> </div>`,
+    data() {
+        return {
+            waterLevelChartConfig: {
+                data: [45],
+                shape: 'round',
+                waveHeight: 25,
+                waveNum: 2
+            }
+        }
+    }
 });
 
 
@@ -141,7 +152,8 @@ var app = new Vue({
     components: {
         'digitalFlop': digitalFlop,
         'rankingBoard': rankingBoard,
-        'roseChart':roseChart
+        'roseChart': roseChart,
+        'waterLevelChart': waterLevelChart
     }
 
 });
@@ -157,8 +169,7 @@ function randomExtend(minNum, maxNum) {
 }
 
 function getDigitalFlopData() {
-    return [
-        {
+    return [{
             title: '管养里程',
             number: {
                 number: [randomExtend(20000, 30000)],
