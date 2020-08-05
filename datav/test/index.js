@@ -269,9 +269,9 @@ var app = new Vue({
     components: {
         'digitalFlop': digitalFlop,
         'rankingBoard': rankingBoard,
-        // 'roseChart': roseChart,
-        // 'waterLevelChart': waterLevelChart,
-        // 'scrollBoard': scrollBoard,
+        'roseChart': roseChart,
+        'waterLevelChart': waterLevelChart,
+        'scrollBoard': scrollBoard,
         'cards': cards
     }
 
