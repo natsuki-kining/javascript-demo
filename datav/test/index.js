@@ -71,17 +71,17 @@ var rankingBoard = Vue.extend({
 });
 
 var roseChart = Vue.extend({
-    template: `<div id="rose-chart"> <div class="rose-chart-title">累计计量资金分布</div> <dv-charts :option="roseChartOption" /> </div>`,
+    template: `<div id="rose-chart"> <div class="rose-chart-title">累计计量资金分布</div> <dv-charts :option="option" /> </div>`,
     data() {
         return {
-            roseChartOption: {}
+            option: {}
         }
     },
     methods: {
         createData() {
             const { randomExtend } = this
 
-            this.roseChartOption = {
+            this.option = {
                 series: [{
                     type: 'pie',
                     radius: '50%',
@@ -133,10 +133,10 @@ var roseChart = Vue.extend({
 });
 
 var waterLevelChart = Vue.extend({
-    template: `<div id="water-level-chart"> <div class="water-level-chart-title">计划资金累计完成情况</div> <div class="water-level-chart-details"> 累计完成<span>235,680</span>元 </div> <div class="chart-container"> <dv-water-level-pond :config="waterLevelChartConfig" /> </div> </div>`,
+    template: `<div id="water-level-chart"> <div class="water-level-chart-title">计划资金累计完成情况</div> <div class="water-level-chart-details"> 累计完成<span>235,680</span>元 </div> <div class="chart-container"> <dv-water-level-pond :config="config" /> </div> </div>`,
     data() {
         return {
-            waterLevelChartConfig: {
+            config: {
                 data: [45],
                 shape: 'round',
                 waveHeight: 25,
