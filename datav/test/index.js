@@ -1,6 +1,10 @@
 Vue.component("top-header", {
-    template: '<div id="top-header"> <dv-decoration-8 class="header-left-decoration" /> <dv-decoration-5 class="header-center-decoration" /> <dv-decoration-8 class="header-right-decoration" :reverse="true" /> <div class="center-title">施工养护综合数据</div> </div>'
+    template: topHeaderHtml()
 });
+
+function topHeaderHtml(){
+    return '<div id="top-header"> <dv-decoration-8 class="header-left-decoration" /> <dv-decoration-5 class="header-center-decoration" /> <dv-decoration-8 class="header-right-decoration" :reverse="true" /> <div class="center-title">施工养护综合数据</div> </div>';
+}
 
 var digitalFlop = Vue.extend({
     template: `<div id="digital-flop"> <div class="digital-flop-item" v-for="item in digitalFlopData" :key="item.title" > <div class="digital-flop-title">{{ item.title }}</div> <div class="digital-flop"> <dv-digital-flop :config="item.number" style="width:100px;height:50px;" /> <div class="unit">{{ item.unit }}</div> </div> </div> <dv-decoration-10 /> </div>`,
